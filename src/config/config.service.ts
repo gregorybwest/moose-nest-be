@@ -2,7 +2,7 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import * as dotenv from 'dotenv';
 
-dotenv.config({path: process.env.NODE_ENV = '.env.development.local' });
+dotenv.config({path: process.env.NODE_ENV = process.env.NODE_ENV ? '.env.development.local' : '.env'});
 
 class ConfigService {
   constructor(private env: { [k: string]: string | undefined }) {}
