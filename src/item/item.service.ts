@@ -11,7 +11,7 @@ export class ItemService {
 
   async get() {
     return this.itemRepository.findOne({
-      where: { id: 'ce69810f-7be8-49e1-a920-213d0e5c2177' },
+      where: { id: 'd9058103-4b28-41c4-aefb-4260ed64552a' },
     });
   }
 }
