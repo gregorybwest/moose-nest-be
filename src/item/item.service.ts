@@ -11,7 +11,7 @@ export class ItemService {
 
   async get() {
     return this.itemRepository.findOne({
-      where: { id: 'd9058103-4b28-41c4-aefb-4260ed64552a' },
+      where: { id: 1 },
     });
   }
 }

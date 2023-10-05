@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true,
+  "logging": true,
+  "namingStrategy": {
+    "target": "database",
+    "strategy": "camelCase"
+  }
+}

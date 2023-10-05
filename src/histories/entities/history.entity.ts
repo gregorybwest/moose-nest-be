@@ -5,10 +5,10 @@ import { Column, Entity, ManyToOne } from 'typeorm';
 @Entity({ name: 'history' })
 export class History extends BaseEntity {
   @Column({ type: 'integer' })
-  task_id: number;
+  taskId: number;
 
   @Column({ type: 'boolean' })
-  all_tasks_completed: boolean;
+  alltaskscompleted: boolean;
 
   @ManyToOne(() => Task, (task) => task.histories)
   task: Task;
