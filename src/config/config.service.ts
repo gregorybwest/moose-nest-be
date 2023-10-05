@@ -46,6 +46,8 @@ class ConfigService {
       migrations: ['../migration/*.ts'],
 
       ssl: this.isProduction(),
+      migrationsRun: true,
+      logging: true,
     };
   }
 }
