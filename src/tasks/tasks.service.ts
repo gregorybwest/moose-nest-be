@@ -17,7 +17,14 @@ export class TasksService {
   }
 
   findAll() {
-    return `This action returns all tasks`;
+    return {
+      id: 1,
+      createdat: '2023-08-10T03:17:06.374Z',
+      updatedat: '2023-08-10T03:17:06.374Z',
+      name: 'some task name',
+      doses_required: 3,
+      doses_given: 1,
+    };
   }
 
   findOne(id: number) {
