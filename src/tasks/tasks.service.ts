@@ -12,19 +12,12 @@ export class TasksService {
     private readonly taskRepository: Repository<Task>,
   ) {}
 
-  create(createTaskDto: CreateTaskDto) {
-    return 'This action adds a new task';
+  create({ name, doses_required, doses_given = 0, createdat = new Date(), updatedat = new Date()}: CreateTaskDto) {
+    return this.taskRepository.save({ name, doses_required, doses_given, createdat, updatedat });
   }
 
   findAll() {
-    return {
-      id: 1,
-      createdat: '2023-08-10T03:17:06.374Z',
-      updatedat: '2023-08-10T03:17:06.374Z',
-      name: 'some task name',
-      doses_required: 3,
-      doses_given: 1,
-    };
+    return this.taskRepository.find();
   }
 
   findOne(id: number) {
