@@ -25,10 +25,13 @@ export class TasksController {
     return this.tasksService.findAll();
   }
 
+
   @Get(':id')
   findOne(@Param('id') id: string) {
+    console.log('In basic get')
     return this.tasksService.findOne(+id);
   }
+
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
@@ -38,5 +41,11 @@ export class TasksController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.tasksService.remove(+id);
+  } 
+
+  @Get(':id/add_one')
+  addDose(@Param('id') id: string) {
+    console.log('In add_one');
+    return this.tasksService.addDose(+id);
   }
 }
