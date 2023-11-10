@@ -33,6 +33,13 @@ export class TasksService {
     });
   }
 
+  addDose(id: number) {
+    return this.taskRepository.save({
+      id: id,
+      doses_given: 2
+    })
+  }
+
   update(id: number, updateTaskDto: UpdateTaskDto) {
     return `This action updates a #${id} task`;
   }
